@@ -1,0 +1,276 @@
+
+.gaming-main {
+  margin-top: 24px;
+  max-width: 1650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- HEADER ---------- */
+
+.gaming-header {
+  margin-bottom: 24px;
+}
+
+.gaming-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.gaming-count {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+/* ---------- main 2-column layout ---------- */
+
+.gaming-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3.5fr) minmax(260px, 1.4fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* ------------------ LEFT: PRODUCT LIST ------------------ */
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr) 120px; 
+  gap: 16px;
+  padding: 8px 16px;
+  background-color: var(--color-card);
+  align-items: flex-start; 
+}
+
+
+.product-img {
+  width: 100%;
+  height: 130px;
+  border-radius: 00px;
+  display: block;
+  object-fit: cover;
+  background-color: #000;
+}
+
+/* middle info column */
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.product-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+
+
+.region-green {
+  color: #4ade80;
+}
+
+.product-offers {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+/* right price column */
+
+.product-price-area {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 4px;
+  padding-top: 6px;
+}
+
+
+
+.product-price-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.product-price {
+  font-weight: 550;
+}
+
+.product-old-price {
+  font-size: 11px;
+  text-decoration: line-through;
+  color: var(--color-muted);
+}
+
+.product-discount {
+  font-size: 11px;
+  color: #4ade80;
+}
+
+
+
+
+.product-like {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  grid-column: 3;        
+  justify-self: end;     
+  align-self: end;       
+  margin-right: 0;       
+  margin-top: 12px;      
+}
+
+
+.product-like svg {
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+}
+
+
+.product-like:hover svg {
+  opacity: 0.6;
+}
+
+
+
+/* ------------------ RIGHT: FILTER PANEL ------------------ */
+
+.filter-panel {
+  background-color: var(--color-card);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.filter-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-row {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.filter-row:hover {
+  color: #ffffff;
+}
+
+.filter-label {
+  flex: 1;
+  text-align: left;
+}
+
+.filter-count {
+  margin-right: 8px;
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+.filter-arrow img {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-90deg); 
+}
+
+
+
+.products-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 10px 0 6px;
+  font-size: 12px;
+}
+
+.products-pagination a,
+.products-pagination span {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+}
+
+.products-pagination .page-number {
+  padding: 2px 6px;
+}
+
+.products-pagination .page-number.active {
+  color: #9a63ff;
+}
+
+.products-pagination .page-arrow {
+  padding: 2px 8px;
+}
+
+.products-pagination .page-dots {
+  opacity: 0.75;
+}
+
+/* responsiveness */
+
+@media (max-width: 1200px) {
+  .gaming-layout {
+    grid-template-columns: minmax(0, 1.8fr) minmax(260px, 1fr);
+  }
+
+}
+
+@media (max-width: 900px) {
+  .gaming-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .filter-panel {
+    order: -1;
+  }
+
+
+  .product-price-area {
+    grid-column: span 2;
+    align-items: flex-start;
+  }
+
+
+}
